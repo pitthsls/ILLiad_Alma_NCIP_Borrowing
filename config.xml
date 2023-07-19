@@ -2,7 +2,7 @@
 <Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Name>ALMA_NCIP_Borrowing_Client_V3</Name>
   <Author>Bill Jones, SUNY Geneseo and Tim Jackson, SUNY SLSS</Author>
-  <Version>3.1</Version>
+  <Version>3.2</Version>
   <Active>True</Active>
   <Type>System</Type>
   <Description>This system level addon allows for ILLiad to communicate with Alma via NCIP protocol.</Description>
