@@ -1,4 +1,4 @@
---About ALMA_NCIP_Borrowing 3.1
+--About ALMA_NCIP_Borrowing 3.2
 --
 --Author:  Bill Jones III, SUNY Geneseo, IDS Project, jonesw@geneseo.edu
 --Modified by: Tom McNulty, VCU Libraries, tmcnulty@vcu.edu
@@ -88,7 +88,8 @@ function BorrowingAcceptItem(transactionProcessedEventArgs)
 	LogDebug("Upload response was[" .. BAIresponseArray .. "]");
 	
 	LogDebug("Starting error catch")
-	local currentTN = GetFieldValue("Transaction", "TransactionNumber");
+	local currentTN_int = GetFieldValue("Transaction", "TransactionNumber");
+	local currentTN = luanet.import_type("System.Convert").ToDouble(currentTN_int);
 	
 	if string.find (BAIresponseArray, "Item Not Checked Out") then
 	LogDebug("NCIP Error: Item Not Checked Out");
@@ -120,7 +121,7 @@ function BorrowingAcceptItem(transactionProcessedEventArgs)
     SaveDataSource("Transaction");
 	
 	else
-	LogDebug("No Problems found in NCIP Response.")
+	LogDebug("No Problems found in NCIP Response.");
 	ExecuteCommand("AddNote", {currentTN, "NCIP Response for BorrowingAcceptItem received successfully"});
     SaveDataSource("Transaction");
 	end
@@ -145,7 +146,8 @@ function BorrowingCheckInItem(transactionProcessedEventArgs)
 	LogDebug("Upload response was[" .. BCIIresponseArray .. "]");
 	
 	LogDebug("Starting error catch")
-	local currentTN = GetFieldValue("Transaction", "TransactionNumber");
+	local currentTN_int = GetFieldValue("Transaction", "TransactionNumber");
+	local currentTN = luanet.import_type("System.Convert").ToDouble(currentTN_int);
 	
 	if string.find(BCIIresponseArray, "Unknown Item") then
 	LogDebug("NCIP Error: ReRouting Transaction");
@@ -192,6 +194,7 @@ local user = GetFieldValue("Transaction", "Username");
 
 if Settings.Use_Prefixes then
 	local t = GetFieldValue("Transaction", Settings.ILLiad_field_for_External_Identifier);
+	
 	if GetFieldValue("Transaction", "LibraryUseOnly") and GetFieldValue("Transaction", "RenewalsAllowed") then
 	    tn = Settings.Prefix_for_LibraryUseOnly_and_RenewablesAllowed .. t;
 	end
@@ -205,11 +208,15 @@ if Settings.Use_Prefixes then
 		tn = Settings.acceptItem_Transaction_Prefix .. t;
 	end
 else  	
-	tn = Settings.acceptItem_Transaction_Prefix .. GetFieldValue("Transaction", Settings.ILLiad_field_for_External_Identifier);
+	local t = GetFieldValue("Transaction", Settings.ILLiad_field_for_External_Identifier);	
+	tn = Settings.acceptItem_Transaction_Prefix .. t;
+	
 	if string.find(tn, "01SUNY") then
-		tn = Settings.acceptItem_Transaction_Prefix .. GetFieldValue("Transaction", Settings.ILLiad_field_for_External_Identifier);	
+	    local t = GetFieldValue("Transaction", Settings.ILLiad_field_for_External_Identifier);
+		tn = Settings.acceptItem_Transaction_Prefix .. t;	
 	else
-		tn = Settings.acceptItem_Transaction_Prefix .. GetFieldValue("Transaction", "TransactionNumber");
+		local t = GetFieldValue("Transaction", "TransactionNumber");
+		tn = Settings.acceptItem_Transaction_Prefix .. t;
 	end
 end
 
