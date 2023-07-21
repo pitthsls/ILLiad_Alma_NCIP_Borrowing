@@ -9,8 +9,8 @@
   <Forms />
   <Permissions />
   <Settings>
-    <Setting name="NCIP_Responder_URL" value="https://suny-xxx.alma.exlibrisgroup.com/view/NCIPServlet" type="string">
-      <Description>Replace "xxx" with your institution's three letter Alma code.</Description>
+    <Setting name="NCIP_Responder_URL" value="https://xxx.alma.exlibrisgroup.com/view/NCIPServlet" type="string">
+      <Description>Replace "xxx" with your institution's three letter Alma code. If SUNY, replace "xxx" with "suny-zzz", and replace zzz with your institution's three letter Alma code.</Description>
     </Setting>
     <Setting name="ILLiad_field_to_get_external_identifier" value="TransactionNumber" type="string">
       <Description>This field will be used as the External Identifier in Alma (the transaction number will be used if this field is empty)</Description>
@@ -18,8 +18,8 @@
     <Setting name="ILLiad_field_to_get_barcode" value="TransactionNumber" type="string">
       <Description>This field will be used as the item barcode in Alma (the transaction number will be used if this field is empty)</Description>
     </Setting>
-    <Setting name="acceptItem_from_uniqueAgency_value" value="01SUNY_XXX" type="string">
-      <Description>Replace "XXX" with your institution's three letter Alma code.</Description>
+    <Setting name="acceptItem_from_uniqueAgency_value" value="XXX" type="string">
+      <Description>Replace "XXX" with your institution's three letter Alma code.  If SUNY, replace "XXX" with "SUNY_ZZZ", and replace ZZZ with your institution's three letter Alma code.</Description>
     </Setting>
     <Setting name="ApplicationProfileType" value="ILL" type="string">
       <Description>Input the Resource Sharing Partner code used in Alma.</Description>
