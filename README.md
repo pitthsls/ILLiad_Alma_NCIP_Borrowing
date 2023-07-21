@@ -6,7 +6,7 @@ This is the official GitHub repository containing the latest updates for the ILL
 
 This is a System Addon for [ILLiad](https://www.atlas-sys.com/illiad) allowing for the creation of items with brief records in Alma from ILLiad via NCIP, using barcodes produced from data within a selectable ILLiad transaction field.
 
-This System Addon needs to be installed in the same directory as your regular Addons in its own folder.  If you make changes to your Addon configurations through the [config.xml](https://github.com/Hypolymer/ILLiad_Alma_NCIP_Borrowing) file while your ILLiad Client is open, you will need to close and reopen your ILLiad Client for the configuration changes to take effect.
+This System Addon needs to be installed in the same directory as your regular Addons in its own folder.  If you make changes to your Addon configurations through the [config.xml](https://github.com/Hypolymer/ILLiad_Alma_NCIP_Borrowing) file while your ILLiad Client is open, you will need to close and reopen your ILLiad Client for the configuration changes to take effect.  You may also make changes to your configuration values through the ILLiad Client, under System > Manage Addons.
 
 If you run into problems and want to see the error log, please check these instructions:  https://github.com/Hypolymer/AddonsLibrary/wiki/Enabling-ILLiad-Client-and-Server-Logs
 
