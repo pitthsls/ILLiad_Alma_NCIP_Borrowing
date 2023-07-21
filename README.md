@@ -19,7 +19,7 @@ Description of Addon Configuration Settings ([config.xml](https://github.com/Hyp
 | NCIP_Responder_URL |  The URL used to connect to your Alma NCIP responder. Replace "xxx" with your institution's three letter Alma code. If SUNY, replace "xxx" with "suny-zzz", and replace zzz with your institution's three letter Alma code.|
 | ILLiad_field_to_get_external_identifier | This ILLiad field will be used as the External Identifier in Alma (the transaction number will be used if this field is empty).|
 | ILLiad_field_to_get_barcode |This field will be used as the item barcode in Alma (the transaction number will be used if this field is empty).|
-|acceptItem_from_uniqueAgency_value| Your institution's Alma code.  This could be a three-letter code, or an underscored code like "01SUNY_GEN"|
+|acceptItem_from_uniqueAgency_value| Your institution's Alma code.  This could be a three-letter code, or an underscored code like "01SUNY_GEN".|
 |ApplicationProfileType|Input the Resource Sharing Partner code used in Alma.  Possible values might be "ILL" or "ILLiad".|
 |BorrowingAcceptItemFailQueue|This designates the name of the queue a Borrowing Transaction will be moved to if the BorrowingAcceptItem function fails. Queue names that do not currently exist will be created automatically.|
 |BorrowingCheckInItemFailQueue|This designates the name of the queue a Borrowing Transaction will be moved to if the BorrowingCheckInItem function fails. Queue names that do not currently exist will be created automatically.|
