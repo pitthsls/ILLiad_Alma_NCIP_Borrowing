@@ -19,7 +19,7 @@
       <Description>This field will be used as the item barcode in Alma (the transaction number will be used if this field is empty)</Description>
     </Setting>
     <Setting name="acceptItem_from_uniqueAgency_value" value="XXX" type="string">
-      <Description>Replace "XXX" with your institution's three letter Alma code.  If SUNY, replace "XXX" with "SUNY_ZZZ", and replace ZZZ with your institution's three letter Alma code.</Description>
+      <Description>Replace "XXX" with your institution's three letter Alma code.  If SUNY, replace "XXX" with "01SUNY_ZZZ", and replace ZZZ with your institution's three letter Alma code.</Description>
     </Setting>
     <Setting name="ApplicationProfileType" value="ILL" type="string">
       <Description>Input the Resource Sharing Partner code used in Alma.</Description>
