@@ -190,7 +190,7 @@ local df = string.match(dr, "%d+/%d+/%d+");
 local mn, dy, yr = string.match(df, "(%d+)/(%d+)/(%d+)");
 local mnt = string.format("%02d",mn);
 local dya = string.format("%02d",dy);
-local user = GetFieldValue("Transaction", "Username");
+local user = GetFieldValue("User", "SSN");
 
 if Settings.Use_Prefixes then
 	local t = GetFieldValue("Transaction", Settings.ILLiad_field_for_External_Identifier);
