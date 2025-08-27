@@ -9,7 +9,7 @@
   <Forms />
   <Permissions />
   <Settings>
-    <Setting name="NCIP_Responder_URL" value="https://pitt-psb.alma.exlibrisgroup.com/view/NCIPServlet" type="string">
+    <Setting name="NCIP_Responder_URL" value="https://pitt.alma.exlibrisgroup.com/view/NCIPServlet" type="string">
       <Description>Replace "xxx" with your institution's three letter Alma code. If SUNY, replace "xxx" with "suny-zzz", and replace zzz with your institution's three letter Alma code.</Description>
     </Setting>
     <Setting name="ILLiad_field_to_get_external_identifier" value="TransactionNumber" type="string">
